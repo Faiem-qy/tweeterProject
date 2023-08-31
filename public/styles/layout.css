@@ -14,11 +14,6 @@ html {
  * Global layout stuff
  */
 
-nav{
-  font-family: 'Bungee', sans-serif, cursive;
-  background-color: blue;
-}
-
 body {
   color: #545149;
   background-color: #f4f1ec;
