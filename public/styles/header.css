@@ -1,0 +1,10 @@
+/* add style to header */
+header {
+  background-color: rgb(115, 255, 0);
+  height: 520px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
