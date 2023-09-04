@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -39,6 +38,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script>
+      document.addEventListener("click", () => {
+        console.log("You just clicked somewhere on this page.");
+      });
+    </script>
   </head>
 
   <body>
@@ -69,11 +73,14 @@
     <!-- add temporary taags to test layout -->
     <main class="container">
       <h1>Lorem Ipsum</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  <h2>Another Section</h2>
-  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</main>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h2>Another Section</h2>
+      <p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat.
+      </p>
     </main>
+    
   </body>
 </html>
