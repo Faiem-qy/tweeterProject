@@ -1,0 +1,47 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 2. CENTER THE HEADER */
+.new-tweet-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 1. BOTTOM BORDER AND COLOR */
+textarea{
+  border: none;
+  border-bottom: 3px solid #545149;
+  outline: 0;
+  background-color: #f4f1ec;
+  width: 100%;
+}
+
+/* 3. POSITION THE BTN AND COUNTER */
+.tweetBtn-and-counter {
+  display:flex;
+  justify-content: space-between;
+  font-family: 'Bungee', sans-serif;
+  font-size: 20px;
+}
+
+/* 4. STYLE THE BUTTON */
+button {
+  background-color: #4056A1 ;
+  border: none;
+  color: #FFFFFF;
+}
