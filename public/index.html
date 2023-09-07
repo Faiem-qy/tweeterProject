@@ -67,7 +67,7 @@
       </div>
       <br />
       <div>
-        <h2>Your Name</h2>
+        <h1>Elon Zuckerberg</h1>
       </div>
     </header>
 
@@ -77,14 +77,30 @@
       <section class="new-tweet">
         <h2 class="new-tweet-heading">Compose Tweet</h2>
         <form class="tweet-form" method="POST" action="/tweets"> <!-- submits to endpoint/route (POST /tweets/) -->
-          <label for="tweet-text">What are you humming about?</label>
+          <label class="tweet-text" for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="tweetBtn-and-counter">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>
+        <section class="tweets-container">
+          <article class="tweet-header"> 
+            <div class="user">
+              Avatar Newton 
+            </div>
+            <div class="handle"> @SirIsaac</div>
+          </article>
+          <article class="tweet-body"> If I have seen further its by standing on the shoulders of giants </article>
+          <article class="tweet-footer"> 
+            10 days ago 
+            <div class="tweet-footer-icons">
+              <i class="fas fa-sharp fas fa-solid fas fa-flag"></i>
+              <i class="fas fa-solid fas fa-retweet"></i>
+              <i class="fas fa-sharp fas fa-solid fas fa-heart"></i>
+            </div>
+          </article>
+        </section>
     </main>
     
   </body>

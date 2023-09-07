@@ -18,19 +18,23 @@ textarea{
 .tweetBtn-and-counter{
   display: flex;
   justify-content: space-between;
-font-family: 'Bungee', sans-serif;
-font-size: 20px;
+  font-family: 'Bungee', sans-serif;
+  font-size: 20px;
 }
 
 /* 4. STYLE THE */
 button{
-  background-color: #4056A1 ;
+  background-color: #1F5673 ;
   border: none;
   color: #FFFFFF;
 }
 
 .redText {
   color: red;
+}
+
+.tweet-text{
+  font-weight: 600;
 }
 
 

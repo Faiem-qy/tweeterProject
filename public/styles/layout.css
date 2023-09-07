@@ -30,8 +30,46 @@ main {
   width: 90%;
   background-color: #f4f1ec;
 }
+.tweets-container {
+  border: 3px solid #545149;
+  margin-top: 45px;
+  padding: 15px;
+}
+.tweets-container:hover{
+  -webkit-box-shadow: 5px 6px 0px 1px #77f4ff; 
+  box-shadow: 5px 6px 0px 1px #77f4ff;
+}
+
+.tweet-header, .tweet-footer{
+  display: flex;
+  justify-content: space-between;
+  font-size: .8em;
+}
+
+.tweet-body{
+  margin: 20px 0px 20px 0px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #545149;
+  font-weight: 600;
+  font-size: .78em;
+}
+
+.tweet-footer{
+  font-weight: 600;
+  font-size: .6em;
+}
+
+.tweet-footer-icons i{
+  color: #1F5673;
+}
+.tweet-footer-icons i:hover {
+  color: #77f4ff;
+}
 
   
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+
+ 

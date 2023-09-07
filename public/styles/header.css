@@ -1,10 +1,14 @@
 /* add style to header */
 header {
-  background-color: rgb(115, 255, 0);
-  height: 520px;
+  /* background-color: rgb(115, 255, 0); */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 250px;
+  color: #77f4ff;
+  background-color: #59d8ff;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
