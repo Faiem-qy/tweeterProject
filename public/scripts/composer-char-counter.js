@@ -13,12 +13,12 @@ $(document).ready(function() { //Without this, we try to access HTML elements on
     const maxChars = 140;
     const remainingChars = maxChars - inputChars;
 
-    console.log('** Remaining Characters >>', remainingChars);
+    // console.log('** Remaining Characters >>', remainingChars);
 
     //Why traverse the DOM instead of using the regular CSS element selector method??
     //^^Its way quicker when there are many levels in the DOM and its best practice
     let count = $(this).parent().children("div").children(".counter");
-    console.log("* Count >>", count);
+    // console.log("* Count >>", count);
     count.text(remainingChars);  //assigning the result of remianingChars to show on the page
 
     if (remainingChars < 0) {
