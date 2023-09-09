@@ -25,19 +25,29 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
+        
 main {
   width: 90%;
   background-color: #f4f1ec;
 }
-.tweets{
+.error-message {
+  display: none;
+  font-size: 30px;
+  border: 2px solid rgb(65, 1, 241);
+  padding: 14px;
+  border-radius: 6px;
+  background-color: #33f5eb;
+  text-align: center;
+}
+
+.tweets {
   border: 3px solid #545149;
   padding: 15px;
   margin: 0px 0px 30px 0px;
 }
 
-.tweets:hover{
-  -webkit-box-shadow: 5px 6px 0px 1px #77f4ff; 
+.tweets:hover {
+  -webkit-box-shadow: 5px 6px 0px 1px #77f4ff;
   box-shadow: 5px 6px 0px 1px #77f4ff;
 }
 
@@ -45,44 +55,42 @@ main {
   margin: 45px 0px 20px 0px;
 }
 
-.tweet-header, .tweet-footer, .user{
+.tweet-header,
+.tweet-footer,
+.user {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
-.user{
+.user {
   font-size: 1em;
 }
-.avatar-outline{
+.avatar-outline {
   margin-right: 8px;
 }
 
-.tweet-body{
+.tweet-body {
   margin: 20px 0px 20px 0px;
   padding-bottom: 20px;
   border-bottom: 3px solid #545149;
   font-weight: 600;
-  font-size: .78em;
+  font-size: 0.78em;
 }
 
-.tweet-footer{
+.tweet-footer {
   font-weight: 600;
-  font-size: .6em;
+  font-size: 0.6em;
 }
 
-.tweet-footer-icons i{
-  color: #1F5673;
+.tweet-footer-icons i {
+  color: #1f5673;
 }
 .tweet-footer-icons i:hover {
   color: #77f4ff;
 }
 
-  
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
-
- 

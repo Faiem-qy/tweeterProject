@@ -13,7 +13,7 @@ $(document).ready(function() {
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweets[i]);
       // takes return value and appends it to the tweets container
-      $('.tweets-container').append($tweet);
+      $('.tweets-container').prepend($tweet);
     }
   };
 
@@ -48,22 +48,38 @@ $(document).ready(function() {
   $form.on("submit", function(event) {
     event.preventDefault();
     console.log("Tweet button was clicked");
-    
+
+    const $msg = $(".error-message");
+    if ($form.children("textarea").val() === "") {
+      console.log("form empty");
+      $msg.text("❗⚡⚡🔥🔥🔥No text was entered🔥🔥🔥⚡⚡❗").slideDown(800);
+      setTimeout(function() {
+        $msg.slideUp(500);
+      }, 5000);
+    }
+    if ($form.children("textarea").val().length > 140) {
+      $msg.text("❗❗❗You have exceeded the maximum amount of characters❗❗❗").slideDown(800);
+      setTimeout(function() {
+        $msg.slideUp(500);
+      }, 5000);
+    }
+
     const $formData = $form.serialize(); // Serialize form data
-    
+
     //Use the jQuery library to submit a POST request that sends the serialized data to the server
     $.ajax({
       url: "/tweets",
       method: 'POST',
       data: $formData
     })
-    .then(function() {
-      loadTweets();
-    })
-    .catch((error) => {
-      console.log("formData function Error: ",error.message);
-    })
-    
+      .then(function() {
+        loadTweets();
+        $form.children("textarea").val("");
+      })
+      .catch((error) => {
+        console.log("formData function Error: ", error.message);
+      });
+
   });
 
   //the loadTweets function performa a get request from the .tweets then gives it to .then,it then renders the data using the renderTweets function
@@ -74,7 +90,7 @@ $(document).ready(function() {
     })
       .then(function(tweets) {
         renderTweets(tweets);
-        console.log(tweets,"loadtweets");
+        console.log(tweets, "loadtweets");
       })
       .catch((error) => {
         console.log("loadTweets function Error: ", error.message);
