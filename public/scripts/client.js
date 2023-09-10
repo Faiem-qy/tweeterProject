@@ -6,6 +6,16 @@
 $(document).ready(function() {
   console.log("Client is Ready");
 
+  const escape = function (str) {
+    //creates a new HTML div element in memory
+    let div = document.createElement("div");
+    // creates a new text node containing the content of the str argument and appends it as a child node to the div element. 
+    div.appendChild(document.createTextNode(str));
+    console.log(div);
+    // this line retrieves the HTML content of the div element
+    //The HTML content will contain the escaped version of the input string, with any HTML special characters (such as <, >, &, etc.) converted to their respective HTML entity representations (e.g., &lt;, &gt;, &amp;).
+    return div.innerHTML;
+  };
 
   const renderTweets = function(tweets) {
     // loops through tweets
@@ -23,14 +33,14 @@ $(document).ready(function() {
   <div class="tweets">
     <article class="tweet-header"> 
       <div class="user">
-        <img class="avatar-outline" src="${(tweetInfo.user.avatars)}" aria-hidden="true" style="height:4vh;"> 
-        ${(tweetInfo.user.name)}
+        <img class="avatar-outline" src="${escape(tweetInfo.user.avatars)}" aria-hidden="true" style="height:4vh;"> 
+        ${escape(tweetInfo.user.name)}
       </div>
-      <div class="handle"> ${(tweetInfo.user.handle)}</div>
+      <div class="handle"> ${escape(tweetInfo.user.handle)}</div>
     </article>
-    <article class="tweet-body"> ${(tweetInfo.content.text)} </article>
+    <article class="tweet-body"> ${escape(tweetInfo.content.text)} </article>
     <article class="tweet-footer"> 
-      ${(timeago.format(tweetInfo.created_at))}
+      ${escape(timeago.format(tweetInfo.created_at))}
       <div class="tweet-footer-icons">
         <i class="fas fa-sharp fas fa-solid fas fa-flag"></i>
         <i class="fas fa-solid fas fa-retweet"></i>
