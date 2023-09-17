@@ -29,6 +29,7 @@ body {
 main {
   width: 90%;
   background-color: #f4f1ec;
+  transition: ease all .5s;
 }
 .error-message {
   display: none;
