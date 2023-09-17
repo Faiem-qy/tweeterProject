@@ -11,13 +11,14 @@ $(document).ready(function() {
     let div = document.createElement("div");
     // creates a new text node containing the content of the str argument and appends it as a child node to the div element. 
     div.appendChild(document.createTextNode(str));
-    console.log(div);
+    // console.log(div);
     // this line retrieves the HTML content of the div element
     //The HTML content will contain the escaped version of the input string, with any HTML special characters (such as <, >, &, etc.) converted to their respective HTML entity representations (e.g., &lt;, &gt;, &amp;).
     return div.innerHTML;
   };
 
   const renderTweets = function(tweets) {
+    $(".tweets-container").html(""); //clear the entire HTML
     // loops through tweets
     for (let i = 0; i < tweets.length; i++) {
       // calls createTweetElement for each tweet
@@ -84,7 +85,6 @@ $(document).ready(function() {
     })
       .then(function() {
         loadTweets();
-        $form.children("textarea").val("");
       })
       .catch((error) => {
         console.log("formData function Error: ", error.message);
@@ -99,6 +99,7 @@ $(document).ready(function() {
       method: "GET"
     })
       .then(function(tweets) {
+        $form.children("textarea").val("");
         renderTweets(tweets);
         console.log(tweets, "loadtweets");
       })
@@ -106,6 +107,7 @@ $(document).ready(function() {
         console.log("loadTweets function Error: ", error.message);
       });
   };
+
   loadTweets();
 
 
