@@ -34,14 +34,14 @@ $(document).ready(function() {
   <div class="tweets">
     <article class="tweet-header"> 
       <div class="user">
-        <img class="avatar-outline" src="${escape(tweetInfo.user.avatars)}" aria-hidden="true" style="height:4vh;"> 
-        ${escape(tweetInfo.user.name)}
+        <img class="avatar-outline" src="${tweetInfo.user.avatars}" aria-hidden="true" style="height:4vh;"> 
+        ${tweetInfo.user.name}
       </div>
-      <div class="handle"> ${escape(tweetInfo.user.handle)}</div>
+      <div class="handle"> ${tweetInfo.user.handle}</div>
     </article>
     <article class="tweet-body"> ${escape(tweetInfo.content.text)} </article>
     <article class="tweet-footer"> 
-      ${escape(timeago.format(tweetInfo.created_at))}
+      ${timeago.format(tweetInfo.created_at)}
       <div class="tweet-footer-icons">
         <i class="fas fa-sharp fas fa-solid fas fa-flag"></i>
         <i class="fas fa-solid fas fa-retweet"></i>
@@ -73,6 +73,9 @@ $(document).ready(function() {
       setTimeout(function() {
         $msg.slideUp(500);
       }, 5000);
+      //if > 140 reset the text to blank and return (stop)
+      $form.children("textarea").val("")
+      return;
     }
 
     const $formData = $form.serialize(); // Serialize form data
