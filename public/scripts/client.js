@@ -11,8 +11,7 @@ $(document).ready(function() {
     let div = document.createElement("div");
     // creates a new text node containing the content of the str argument and appends it as a child node to the div element. 
     div.appendChild(document.createTextNode(str));
-    // console.log(div);
-    // this line retrieves the HTML content of the div element
+      // this line retrieves the HTML content of the div element
     //The HTML content will contain the escaped version of the input string, with any HTML special characters (such as <, >, &, etc.) converted to their respective HTML entity representations (e.g., &lt;, &gt;, &amp;).
     return div.innerHTML;
   };
@@ -58,11 +57,8 @@ $(document).ready(function() {
   const $form = $(".tweet-form");
   $form.on("submit", function(event) {
     event.preventDefault();
-    console.log("Tweet button was clicked");
-
     const $msg = $(".error-message");
     if ($form.children("textarea").val() === "") {
-      console.log("form empty");
       $msg.text("❗⚡⚡🔥🔥🔥No text was entered🔥🔥🔥⚡⚡❗").slideDown(800);
       setTimeout(function() {
         $msg.slideUp(500);
@@ -91,7 +87,6 @@ $(document).ready(function() {
       .catch((error) => {
         console.log("formData function Error: ", error.message);
       });
-
   });
 
   //the loadTweets function performa a get request from the .tweets then gives it to .then,it then renders the data using the renderTweets function
