@@ -73,8 +73,7 @@ $(document).ready(function() {
       setTimeout(function() {
         $msg.slideUp(500);
       }, 5000);
-      //if > 140 reset the text to blank and return (stop)
-      $form.children("textarea").val("")
+      //if > 140 return (stop)
       return;
     }
 
